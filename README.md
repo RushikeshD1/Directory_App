@@ -20,3 +20,4 @@ Viewing and Deleting Entries:
 
 1.Saved data is shown in a table below the form.
 2.Each entry includes a delete button for removing the respective person's data.
+3.added local storage features
