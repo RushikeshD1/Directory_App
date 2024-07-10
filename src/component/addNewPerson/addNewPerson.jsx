@@ -45,12 +45,12 @@ const AddNewPerson = () => {
         localStorage.setItem('savedData', JSON.stringify(updateData))
     }
 
-    // useEffect(() => {
-    //     const retriveData = JSON.parse(localStorage.getItem('savedData'))
-    //     if(retriveData){
-    //         setSave(retriveData)
-    //     }
-    // }, [])
+    useEffect(() => {
+        const retriveData = JSON.parse(localStorage.getItem('savedData'))
+        if(retriveData){
+            setSave(retriveData)
+        }
+    }, [])
 
     return (
         <>
