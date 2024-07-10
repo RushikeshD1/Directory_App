@@ -1,8 +1,22 @@
-# React + Vite
+# Directory App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a React component for managing and displaying person data.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add New Person: Allows users to input details such as name, date of birth, Aadhar number, and mobile number.
+View Saved Data: Displays saved person data in a table format.
+Delete Entries: Provides functionality to delete individual entries from the table.
+
+### Usage
+
+Adding a New Person:
+
+1.Click the Add button to open the form.
+2.Fill out all required fields.
+3.Click Save to add the person's details.
+
+Viewing and Deleting Entries:
+
+1.Saved data is shown in a table below the form.
+2.Each entry includes a delete button for removing the respective person's data.
