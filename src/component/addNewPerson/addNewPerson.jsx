@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const AddNewPerson = () => {
 
@@ -9,7 +9,7 @@ const AddNewPerson = () => {
 
     const [isForm, setIsForm] = useState(false)
     const [save, setSave] = useState([])
-
+    
     const openForm = () => {
         setIsForm(!isForm)
     }
@@ -22,12 +22,18 @@ const AddNewPerson = () => {
         }
 
         const savedData = { name, date, add, mobile }
-        setSave([...save, savedData])
+        const updatedSave = [...save, savedData];        
+
+        setSave(updatedSave)  
+        localStorage.setItem('savedData', JSON.stringify(updatedSave))             
+
         setName("")
         setDate("")
         setAdd("")
         setMobile("")
-        setIsForm(false)        
+        setIsForm(false)      
+        
+        
     }
 
     console.log(save);
@@ -35,7 +41,16 @@ const AddNewPerson = () => {
     const deleteData = (index) => {
         const updateData = save.filter((item, idx) => (idx !== index))
         setSave(updateData)
+
+        localStorage.setItem('savedData', JSON.stringify(updateData))
     }
+
+    // useEffect(() => {
+    //     const retriveData = JSON.parse(localStorage.getItem('savedData'))
+    //     if(retriveData){
+    //         setSave(retriveData)
+    //     }
+    // }, [])
 
     return (
         <>
