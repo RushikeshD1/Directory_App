@@ -1,0 +1,6 @@
+dependeces --> 
+    tailwind
+
+1.header
+2.component --> addNewPerson
+                retrivePerson
